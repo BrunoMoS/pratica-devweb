@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Hexadecimal</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-center">
+            <h1>Trocador de Cores</h1>
+            <ul class="nav-links">
+                <li id="sep">
+                    <a href="color-flipper.html">Simples</a>
+                </li>
+                <li id="sep">
+                    <a href="pagehex.html">hexadecimal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h3 id="tc">Cor da pagina : <span class="color">#f1f5f8</span></h3>
+            <button class="btn-hero" id="btn">Clique me</button>
+        </div>
+    </main>
+    <script>
+        const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+        const btn = document.getElementById('btn')
+        const color = document.querySelector('.color')
+
+        btn.addEventListener('click', function () {
+            let hexColor = '#'
+            for(let i = 0; i < 6; i++) {
+                hexColor += hex[getRandomNumber()]
+            }
+            color.textContent = hexColor
+            document.body.style.backgroundColor = hexColor
+        })
+
+        function getRandomNumber() {
+            return Math.floor(Math.random() * hex.length)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>
+                Contador
+            </h1>
+            <span id="value">0</span>
+            <div class="button-container">
+                <button class="btn d">diminuir</button>
+                <button class="btn r">reiniciar</button>
+                <button class="btn s">somar</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        let count = 0 
+        const value = document.querySelector('#value')
+        const btns = document.querySelectorAll('.btn')
+        
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function(e) {
+                const styles = e.currentTarget.classList
+                if(styles.contains('d')) {
+                    count--
+                } else if(styles.contains('s')) {
+                    count++
+                } else {
+                    count = 0
+                }
+                if(count > 0) {
+                    value.style.color = 'green'
+                } else if(count < 0) {
+                    value.style.color = 'blue'
+                } else if(count === 0) {
+                    value.style.color = '#222'
+                }
+                value.textContent = count
+            })
+        })
+    </script>
+</body>
+</html>
