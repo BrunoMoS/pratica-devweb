@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+h1{
+    font: normal 16pt arial;
+    height: 10px;
+}
+
+p{
+    font: normal 12pt arial;
+    height: 10px;
+}
+
+#area{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:15px;            
+    margin: 1px;
+    padding: 3px;
+    color: #e8e5da;
+} 
+
+#res{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:100px;            
+    margin: 1px;
+    padding: 1px;
+    color: #e8e5da;
+}
+
+#resp{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:15px;            
+    margin: 1px;
+    padding: 1px;
+    color: #e8e5da;
+}
+
+#re{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:60px;            
+    margin: 1px;
+    padding: 1px;
+    color: #e8e5da;
+}
+
+#dados{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:140px;            
+    margin: 1px;
+    padding: 1px;
+    color: #e8e5da;
+}
+
+#solu{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:100px;            
+    margin: 1px;
+    padding: 1px;
+    color: #e8e5da;
+}
+
+#tabu{
+    font: normal 12pt arial;
+    background: #588b8b;
+    color: rgb(39, 15, 12);
+    width: 600px;
+    height:240px;            
+    margin: 1px;
+    padding: 1px;
+    color: #e8e5da;
+}

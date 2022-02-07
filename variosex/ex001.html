@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ínicio</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+       
+    <div id="area" onclick="entrar()">
+        Click!
+    </div>    
+    <h1>Sistema de Multas</h1>
+    <p>Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h <input type="button" value="Verificar" onclick="Verificar()"></p>
+    <div id="res"></div>
+    
+    <h1>Calculadora Simples</h1>
+    <p><input type="radio" name="operação" id="radso" checked>Somar <input type="radio" name="operação" id="radsu">Subtrair <input type="radio" name="operação" id="radmu">Multiplicar <input type="radio" name="operação" id="raddi">Dividir </p>
+    <p>
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Calcular" onclick="Calcular()">
+    </p>
+    <div id="resp">Resultado:</div>
+
+    <h1>Qual pais?</h1>
+    <p>Você é de qual país? <input type="text" name="txtp" id="txtp"> <input type="button" value="Pesquisar" onclick="Pesquisar()">
+    </p>
+    <div id="re"></div>
+
+    <h1>Contador</h1>
+    <div id="dados">
+        <p>Número inicial: <input type="number" name="inicio" id="txti"></p>
+        <p>Número final: <input type="number" name="fim" id="txtf"></p>
+        <p>Salto: <input type="number" name="passo" id="txtpa"></p>
+        <p><input type="button" value="contar" onclick="Contar()"></p>
+    </div>
+    <div id="solu">
+        
+    </div>
+
+    <div id="tabu">
+        <p>Tabuada Nº: <input type="number" name="numt" id="txtnt"><input type="button" value="Gerar Tabuada" onclick="Tabuada()"></p>
+        <select name="tabuada" id="selt" size="11"> <option value="php">Informe Nº Acima</option></select>
+    </div>
+    
+    <script src="myscript.js"></script>
+</body>
+</html>
