@@ -1,0 +1,38 @@
+@charset "UTF-08";
+
+body {    
+    font: normal 18pt arial;
+    text-align: center;
+}
+
+header {
+    color: #dce2aa;
+}
+
+section {
+    background: #dce2aa;
+    border-radius: 8px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+    color: #f5fbef;
+}
+
+div {
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #f5fbef;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: #dce2aa;
+    text-align: center;
+    
+}
