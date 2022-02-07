@@ -1,4 +1,4 @@
-let resposta = window.prompt('Deseja fazer uma soma? ')        
+let resposta = window.prompt('Deseja Utilizar todo site? ')        
         function entrar() {
             var a = window.document.getElementById('area')
             a.innerText = "Clicou!"
