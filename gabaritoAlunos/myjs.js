@@ -11,7 +11,7 @@ var m = 0.0
 var r = document.querySelector('#rel')
 
 
-function Guardargo() {
+function guardarGo() {
     let al = document.querySelector('#gabo')
     go.push(al.value)
     al.value = ''
@@ -22,7 +22,7 @@ function Guardargo() {
 }
 
 
-function Guardarn() {
+function guardarN() {
     no = document.querySelector('#nom')
     n.push(no.value)
     no.value = ''
@@ -34,7 +34,7 @@ function Guardarn() {
 }
 
 
-function Guardarga() {
+function guardarGa() {
     ala = document.querySelector('#gaba')
     ga.push(ala.value)
     ala.value = ''
