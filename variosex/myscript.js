@@ -1,42 +1,42 @@
 let resposta = window.prompt('Deseja Utilizar todo site? ')        
         function entrar() {
-            var a = window.document.getElementById('area')
+            let a = window.document.getElementById('area')
             a.innerText = "Clicou!"
         }
         if (resposta == 'sim') {
             function Calcular() {
                 let calculo = document.getElementsByName('operação')
-                var tn1 = window.document.getElementById('txtn1')
-                var tn2 = window.document.querySelector('#txtn2')
-                var res = window.document.getElementById('resp') 
-                var n1 = Number(tn1.value)
-                var n2 = Number(tn2.value)
+                let tn1 = window.document.getElementById('txtn1')
+                let tn2 = window.document.querySelector('#txtn2')
+                let res = window.document.getElementById('resp') 
+                let n1 = Number(tn1.value)
+                let n2 = Number(tn2.value)
                 res.innerHTML = ''
                 if(calculo[0].checked ) {
-                    var cal = n1 + n2
+                    let cal = n1 + n2
                     res.innerHTML += ` A soma entre ${n1} e ${n2} é igual a ${cal}`
                 } else if(calculo[1].checked ) {
                     if(n1 > n2) {
-                        var cal = n1 - n2
+                        let cal = n1 - n2
                         res.innerHTML += ` A subtração entre ${n1} e ${n2} é igual a ${cal}`
                     }else {
-                        var cal = n2 - n1
+                        let cal = n2 - n1
                         res.innerHTML += ` A subtração entre ${n2} e ${n1} é igual a ${cal}`
                     }
                 } else if(calculo[2].checked ) {
-                    var cal = n1 * n2
+                    let cal = n1 * n2
                     res.innerHTML += ` A multiplicação entre ${n1} e ${n2} é igual a ${cal}`
                 } else if(calculo[3].checked ) {
-                    var cal = n1 / n2
+                    let cal = n1 / n2
                     res.innerHTML += ` A divisão entre ${n1} e ${n2} é igual a ${cal}`
                 }
             
             }
 
             function Verificar() {
-                var txtv = window.document.querySelector('#txtvel')
-                var res = window.document.querySelector('#res')
-                var vel = Number(txtv.value)
+                let txtv = window.document.querySelector('#txtvel')
+                let res = window.document.querySelector('#res')
+                let vel = Number(txtv.value)
                 res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
                 if (vel > 80) {
                     res.innerHTML += `<p><strong>MULTADO</strong> velocidade acima do permitido ${vel} km/h</p>`
@@ -62,9 +62,9 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                 let fim = document.getElementById('txtf')
                 let passo = document.getElementById('txtpa')
                 let solu = document.getElementById('solu')                
-                var i = Number(ini.value)
-                var f = Number(fim.value)
-                var p = Number(passo.value)
+                let i = Number(ini.value)
+                let f = Number(fim.value)
+                let p = Number(passo.value)
                 
                if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
                    window.alert('Você precisa pencher todos os campos!')

@@ -1,8 +1,8 @@
 function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('manha')
-    var data = new Date()
-    var hora = data.getHours()
+    let msg = window.document.getElementById('msg')
+    let img = window.document.getElementById('manha')
+    let data = new Date()
+    let hora = data.getHours()
     msg.innerHTML = `Agora são ${hora} horas.`
     if (hora >= 0 && hora < 12) {
         img.src = 'imagens/manhac.png'
@@ -20,15 +20,15 @@ function carregar() {
 function verificar() {
     let data = new Date()
     let ano = data.getFullYear()
-    var fano = document.getElementById('txtano')
-    const res = document.querySelector('div#res')
+    let fano = document.getElementById('txtano')
+    let res = document.querySelector('div#res')
     if (fano.value.length == 0 || Number(fano.value) > ano) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
         let fsex = document.getElementsByName('radsex')
-        const idade = ano - Number(fano.value)
+        let idade = ano - Number(fano.value)
         let genero = ''
-        var img = document.createElement('img')
+        let img = document.createElement('img')
         img.setAttribute('id', 'f')
         if (fsex[0].checked) {
             genero = 'Homem'

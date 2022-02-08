@@ -1,7 +1,7 @@
-let n = document.querySelector('#cn')
-let l = document.querySelector('#alv')
-let r = document.querySelector('#r')
-let nu = []
+var n = document.querySelector('#cn')
+var l = document.querySelector('#alv')
+var r = document.querySelector('#r')
+var nu = []
 
 function Numero(num) {
     if(Number(num) >= 1 && Number(num) <= 100) {

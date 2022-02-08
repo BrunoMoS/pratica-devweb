@@ -1,13 +1,14 @@
-let go = []
-let n = []
-let ga = []
-let nta = []
-let no = ''
-let ala = ''
-let ma = 0 // variável necessária para inicializar o laço que vai alimentar nta 
-let nt = 0
-let sn = 0.0
-let m = 0.0
+var go = []
+var n = []
+var ga = []
+var nta = []
+var no = ''
+var ala = ''
+var ma = 0 // variável necessária para inicializar o laço que vai alimentar nta 
+var nt = 0
+var sn = 0.0
+var m = 0.0
+let r = document.querySelector('#rel')
 
 
 function Guardargo() {
@@ -71,7 +72,6 @@ function Verificar() {
 }
 
 
-let r = document.querySelector('#rel')
 function Relatorio() {
     let st = ''
     for(let i = 0; i < n.length; i++) {
