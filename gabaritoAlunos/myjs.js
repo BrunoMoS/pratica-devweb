@@ -5,10 +5,9 @@ var nta = []
 var no = ''
 var ala = ''
 var ma = 0 // variável necessária para inicializar o laço que vai alimentar nta 
-var nt = 0
 var sn = 0.0
 var m = 0.0
-var r = document.querySelector('#rel')
+var r = ''
 
 
 function guardarGo() {
@@ -46,7 +45,8 @@ function guardarGa() {
 
 
 function Verificar() {
-    nt = 0
+    let nt = 0
+    r = document.querySelector('#rel')
     for (let j = ma - 1 ; j < n.length; j++){ // decremento na ma para a nta ser inicializada
         for (let i = 0; i < go.length; i++) {
             for (let c = 0; c < go.length; c++) {
