@@ -7,7 +7,7 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
             function Calcular() {
                 let calculo = document.getElementsByName('operação')
                 var tn1 = window.document.getElementById('txtn1')
-                var tn2 = window.document.querySelector('input#txtn2')
+                var tn2 = window.document.querySelector('#txtn2')
                 var res = window.document.getElementById('resp') 
                 var n1 = Number(tn1.value)
                 var n2 = Number(tn2.value)
@@ -34,8 +34,8 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
             }
 
             function Verificar() {
-                var txtv = window.document.querySelector('input#txtvel')
-                var res = window.document.querySelector('div#res')
+                var txtv = window.document.querySelector('#txtvel')
+                var res = window.document.querySelector('#res')
                 var vel = Number(txtv.value)
                 res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
                 if (vel > 80) {
