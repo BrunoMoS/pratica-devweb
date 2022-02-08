@@ -80,7 +80,7 @@ function Relatorio() {
         } else {
             st = 'Reprovada(o)'
         }
-        r.innerHTML += `<p>${n[i]} Nota: ${nta[i]} Situação: ${st} Média da turma: ${m}</p>` 
+        r.innerHTML += `<p>${n[i]} Nota: ${nta[i]} Situação: ${st} Média da turma: ${m.toFixed(1)}</p>` 
     }
 }
 
