@@ -67,7 +67,7 @@ function lQ() {
 function gS() {
     let re = undefined
     resE.forEach((resE) => {
-        if(resE.checked) {
+        if (resE.checked) {
             re = resE.id
         }
     })
@@ -82,12 +82,12 @@ function dsA() {
 
 btn.addEventListener('click', () => {
     let re = gS()
-    if(re) {
-        if(re === qD[cQ].r) {
+    if (re) {
+        if (re === qD[cQ].r) {
             score++
         }
         cQ++
-        if(cQ < qD.length) {
+        if (cQ < qD.length) {
             lQ()
         } else {
             qz.innerHTML = `<h2> Você acertou corretamente ${score} de ${qD.length} perguntas. </h2> <button onClick='location.reload()'>Reiniciar</button>`

@@ -5,18 +5,18 @@ let count = 0
         btns.forEach(function (btn) {
             btn.addEventListener('click', function(e) {
                 const styles = e.currentTarget.classList
-                if(styles.contains('d')) {
+                if (styles.contains('d')) {
                     count--
-                } else if(styles.contains('s')) {
+                } else if (styles.contains('s')) {
                     count++
                 } else {
                     count = 0
                 }
-                if(count > 0) {
+                if (count > 0) {
                     value.style.color = 'green'
-                } else if(count < 0) {
+                } else if (count < 0) {
                     value.style.color = 'blue'
-                } else if(count === 0) {
+                } else if (count === 0) {
                     value.style.color = '#222'
                 }
                 value.textContent = count

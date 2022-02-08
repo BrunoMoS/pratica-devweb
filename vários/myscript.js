@@ -48,9 +48,9 @@ function atualizarNome() {
      } else {
          ultimoResultado.textContent = 'Errado!'
          ultimoResultado.style.backgroundColor = '#e84855'
-         if(pu < numeroAleatorio) {
+         if (pu < numeroAleatorio) {
              baixoOuAlto.innerHTML = `<p><strong>${nome}</strong> seu palpite está muito baixo!</p>`
-         } else if(pu > numeroAleatorio) {
+         } else if (pu > numeroAleatorio) {
              baixoOuAlto.innerHTML = `<p><strong>${nome}</strong> seu palpite está muito alto!</p>`
          }
      }
@@ -89,7 +89,7 @@ function configFimDeJogo() {
 function reiniciarJogo() {
     contagemPalpites = 1
     var reiniciarParas = document.querySelectorAll('.resultadoParas p')
-    for(var i = 0; i < reiniciarParas.length; i++) {
+    for (var i = 0; i < reiniciarParas.length; i++) {
         reiniciarParas[i].textContent = ''
     }
 

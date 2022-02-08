@@ -12,21 +12,21 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                 let n1 = Number(tn1.value)
                 let n2 = Number(tn2.value)
                 res.innerHTML = ''
-                if(calculo[0].checked ) {
+                if (calculo[0].checked ) {
                     let cal = n1 + n2
                     res.innerHTML += ` A soma entre ${n1} e ${n2} é igual a ${cal}`
-                } else if(calculo[1].checked ) {
-                    if(n1 > n2) {
+                } else if (calculo[1].checked ) {
+                    if (n1 > n2) {
                         let cal = n1 - n2
                         res.innerHTML += ` A subtração entre ${n1} e ${n2} é igual a ${cal}`
-                    }else {
+                    } else {
                         let cal = n2 - n1
                         res.innerHTML += ` A subtração entre ${n2} e ${n1} é igual a ${cal}`
                     }
-                } else if(calculo[2].checked ) {
+                } else if (calculo[2].checked ) {
                     let cal = n1 * n2
                     res.innerHTML += ` A multiplicação entre ${n1} e ${n2} é igual a ${cal}`
-                } else if(calculo[3].checked ) {
+                } else if (calculo[3].checked ) {
                     let cal = n1 / n2
                     res.innerHTML += ` A divisão entre ${n1} e ${n2} é igual a ${cal}`
                 }
@@ -66,15 +66,15 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                 let f = Number(fim.value)
                 let p = Number(passo.value)
                 
-               if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+               if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
                    window.alert('Você precisa pencher todos os campos!')
-               } else if(i < f) {
+               } else if (i < f) {
                    solu.innerHTML = ''
                    for(var c = i; c <= f; c += p) {
                        solu.innerHTML += `${c} `
                    }
                } else {
-                   for(var c = i; c >= f; c -= p) {
+                   for (var c = i; c >= f; c -= p) {
                        solu.innerHTML += `${c} `
                    }
                }
@@ -85,11 +85,11 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                 let tab = document.getElementById('selt')
                 let n = Number(num.value)
 
-                if(num.value.length == 0) {
+                if (num.value.length == 0) {
                     window.alert('Você precisa digitar um número!')
                 } else {
                     tab.innerHTML = ''
-                    for(var m = 0; m <= 10; m++) {
+                    for (var m = 0; m <= 10; m++) {
                         var item = document.createElement('option')
                         item.text = `${m} x ${n} = ${m * n}`
                         tab.appendChild(item)

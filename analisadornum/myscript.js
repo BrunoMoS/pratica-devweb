@@ -4,7 +4,7 @@ var r = document.querySelector('#r')
 var nu = []
 
 function Numero(num) {
-    if(Number(num) >= 1 && Number(num) <= 100) {
+    if (Number(num) >= 1 && Number(num) <= 100) {
         return true
     } else {
         return false
@@ -12,7 +12,7 @@ function Numero(num) {
 }
 
 function Lista(num, l) {
-    if(l.indexOf(Number(num)) != - 1) {
+    if (l.indexOf(Number(num)) != - 1) {
         return true
     } else {
         return false
@@ -20,7 +20,7 @@ function Lista(num, l) {
 }
 
 function Ad() {
-    if(Numero(n.value) && !Lista(n.value, nu)) {
+    if (Numero(n.value) && !Lista(n.value, nu)) {
         nu.push(Number(n.value))
         let itemAd = document.createElement('option')
         itemAd.text = `${n.value} adicionado.`
@@ -34,7 +34,7 @@ function Ad() {
 }
 
 function Vrf() {
-    if(nu.length === 0) {
+    if (nu.length === 0) {
         alert('Adicione números') 
     } else {
         let tn = nu.length
@@ -42,12 +42,12 @@ function Vrf() {
         let nMin = nu[0]
         let sn = 0
         let m = 0
-        for(let i in nu) {
+        for (let i in nu) {
             sn += nu[i]
-            if(nMax < nu[i]) {
+            if (nMax < nu[i]) {
                 nMax = nu[i]
             }
-            if(nMin > nu[i]) {
+            if (nMin > nu[i]) {
                 nMin = nu[i]
             }
         }
