@@ -70,7 +70,7 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                    window.alert('Você precisa pencher todos os campos!')
                } else if (i < f) {
                    solu.innerHTML = ''
-                   for(var c = i; c <= f; c += p) {
+                   for (var c = i; c <= f; c += p) {
                        solu.innerHTML += `${c} `
                    }
                } else {
