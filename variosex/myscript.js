@@ -12,10 +12,10 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                 let n1 = Number(tn1.value)
                 let n2 = Number(tn2.value)
                 res.innerHTML = ''
-                if (calculo[0].checked ) {
+                if (calculo[0].checked) {
                     let cal = n1 + n2
                     res.innerHTML += ` A soma entre ${n1} e ${n2} é igual a ${cal}`
-                } else if (calculo[1].checked ) {
+                } else if (calculo[1].checked) {
                     if (n1 > n2) {
                         let cal = n1 - n2
                         res.innerHTML += ` A subtração entre ${n1} e ${n2} é igual a ${cal}`
@@ -23,10 +23,10 @@ let resposta = window.prompt('Deseja Utilizar todo site? ')
                         let cal = n2 - n1
                         res.innerHTML += ` A subtração entre ${n2} e ${n1} é igual a ${cal}`
                     }
-                } else if (calculo[2].checked ) {
+                } else if (calculo[2].checked) {
                     let cal = n1 * n2
                     res.innerHTML += ` A multiplicação entre ${n1} e ${n2} é igual a ${cal}`
-                } else if (calculo[3].checked ) {
+                } else if (calculo[3].checked) {
                     let cal = n1 / n2
                     res.innerHTML += ` A divisão entre ${n1} e ${n2} é igual a ${cal}`
                 }
