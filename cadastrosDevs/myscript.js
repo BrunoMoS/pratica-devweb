@@ -6,7 +6,6 @@ var sN = []
 var tN = []
 var cD = []
 let obj = new Object
-var axn = ''
 var r = ''
 var ax0 = ''
 
@@ -24,7 +23,6 @@ sl.addEventListener('change', sS)
 function S() {
     let no = document.querySelector('#nm')
     nM.push(no.value)
-    axn = nM.length
     no.value = ''
     no.focus()
     let so = document.querySelector('#sbn')
@@ -48,7 +46,7 @@ function S() {
     let cs = document.querySelector('#t4')
     let phy = document.querySelector('#t5')
     let ja = document.querySelector('#t6')
-    for (let i=axn-1; i<nM.length; i++) {
+    for (let i=nM.length-1; i<nM.length; i++) {
         if (ht.checked) {
             ax0 += `[${ht.value}]`
         }
@@ -83,7 +81,7 @@ function S() {
         ja.checked = false
     }
     r = document.querySelector('#r')
-    for (let i=axn-1; i<nM.length; i++) {
+    for (let i=nM.length-1; i<nM.length; i++) {
         obj = (`${nM[i]} ${sB[i]} ${eM[i]} ${cT[i]} ${sN[i]} ${tN[i]}`)
     }
     cD.push(obj)
