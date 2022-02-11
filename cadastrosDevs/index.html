@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Cadastro de Devs</h1>
+            <p>Complete suas informações</p>
+        </header>
+        <article>
+            <section>
+                <form action="">
+                    <fieldset class="gr">
+                        <div class="cp">
+                            <label for="nm"><strong>Nome</strong></label>
+                            <input type="text" name="nome" id="nm" required>
+                        </div>
+                        <div class="cp">
+                            <label for="sbn"><strong>Sobrenome</strong></label>
+                            <input type="text" name="sobrenome" id="sbn" required>
+                        </div>
+                    </fieldset>
+                    <div class="cp">
+                        <label for="em"><strong>Email</strong></label>
+                        <input type="email" name="email" id="em" required>
+                    </div>
+                    <div class="cp">
+                        <label for=""><strong>De qual lado da aplicação você desenvolve?</strong></label>
+                        <label for="">
+                            <input type="radio" name="dw" value="Front-end" checked>Front-end
+                        </label>
+                        <label for="">
+                            <input type="radio" name="dw" value="Back-end">Back-end
+                        </label>
+                        <label for="">
+                            <input type="radio" name="dw" value="Fullstack">Fullstack
+                        </label>
+                    </div>
+                    <div class="cp">
+                        <label for="sn"><strong>Senioridade</strong></label>
+                        <select name="" id="sn">
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="">Junior</option>
+                            <option value="">Pleno</option>
+                            <option value="">Senior</option>
+                        </select>
+                    </div>                    
+                    <div id="ck">
+                            <label><strong>Selecione as tecnologia que utiliza:</strong></label>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t0" name="HTML" value="HTML">
+                                    <label for="tch0">HTML</label>
+                                </div>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t1" name="tecnologia1" value="CSS">
+                                    <label for="tch1">CSS</label>
+                                </div>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t2" name="tecnologia2" value="JavaScript">
+                                    <label for="tch2">JavaScript</label>
+                                </div>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t3" name="tecnologia3" value="PHP">
+                                    <label for="tch3">PHP</label>
+                                </div>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t4" name="tecnologia4" value="C#">
+                                    <label for="tch4">C#</label>
+                                </div>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t5" name="tecnologia5" value="Phython">
+                                    <label for="tch5">Phython</label>
+                                </div>
+                                <div>
+                                    <input class="chek" type="checkbox" id="t6" name="tecnologia6" value="Java">
+                                    <label for="tch6">Java</label>
+                                </div>
+                    </div>                   
+                    <div id="dbtn">
+                        <button class="btn" id="btns" type="submit">Salvar</button><input type="button" class="btn" id="btnr" value="Relatório" onclick="rL()">
+                    </div>
+                </form>
+            </section>
+            <div id="r"></div>
+        </article>
+    </main>
+    <script src="myscript.js"></script>
+</body>
+</html>
