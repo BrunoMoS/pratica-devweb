@@ -3,8 +3,7 @@ var n = []
 var ga = []
 var nta = []
 var no = ''
-var ala = ''
-var ma = 0 // variável necessária para inicializar o laço que vai alimentar nta 
+var ala = '' 
 var sn = 0.0
 var m = 0.0
 var r = ''
@@ -15,7 +14,7 @@ function guardarGo() {
     go.push(al.value)
     al.value = ''
     al.focus()
-    if (go.length === 5) {
+    if (go.length===5) {
         al.disabled = true
     }
 }
@@ -26,10 +25,9 @@ function guardarN() {
     n.push(no.value)
     no.value = ''
     no.focus()
-    if (n.length >= 1) {
+    if (n.length>=1) {
         no.disabled = true
     }
-    ma++
 }
 
 
@@ -38,7 +36,7 @@ function guardarGa() {
     ga.push(ala.value)
     ala.value = ''
     ala.focus()
-    if (ga.length === 5) {
+    if (ga.length===5) {
         ala.disabled = true
     }
 }
@@ -47,26 +45,26 @@ function guardarGa() {
 function Verificar() {
     let nt = 0
     r = document.querySelector('#rel')
-    for (let j = ma - 1 ; j < n.length; j++){ // decremento na ma para a nta ser inicializada
-        for (let i = 0; i < go.length; i++) {
-            for (let c = 0; c < go.length; c++) {
-                if (go[i] === ga[c] && i === c) {
+    for (let j=n.length-1; j<n.length; j++){ 
+        for (let i=0; i<go.length; i++) {
+            for (let c=0; c<go.length; c++) {
+                if (go[i]===ga[c] && i===c) {
                     nt += 2.0
                 }
             }
         }
         nta[j] = nt
-        if (nt === 0) {
+        if (nt===0) {
             nta[j] = 0.0
         }
         sn += nta[j]
-        m = sn / n.length
+        m = sn/n.length
     }
-    if (ga.length === 5) {
+    if (ga.length===5) {
         no.disabled = false
         ala.disabled = false
     }
-    for (let i = 0; i < go.length; i++) {
+    for (let i=0; i<go.length; i++) {
         ga.pop()
     }
 }
@@ -74,8 +72,8 @@ function Verificar() {
 
 function Relatorio() {
     let st = ''
-    for (let i = 0; i < n.length; i++) {
-        if (nta[i] > 5.0) {
+    for (let i=0; i<n.length; i++) {
+        if (nta[i]>5.0) {
             st = 'Aprovada(o)'
         } else {
             st = 'Reprovada(o)'
