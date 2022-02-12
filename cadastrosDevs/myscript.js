@@ -5,9 +5,21 @@ var cT = []
 var sN = []
 var tN = []
 var cD = []
-let obj = new Object
+var obj = new Object
 var r = ''
 var ax0 = ''
+var no = document.querySelector('#nm')
+var so = document.querySelector('#sbn')
+var el = document.querySelector('#em')
+var es = document.getElementsByName('dw')
+var ht = document.querySelector('#t0')
+var cc = document.querySelector('#t1')
+var js = document.querySelector('#t2')
+var ph = document.querySelector('#t3')
+var cs = document.querySelector('#t4')
+var phy = document.querySelector('#t5')
+var ja = document.querySelector('#t6')
+
 
 function sS() {
     let opt = this.selectedOptions
@@ -20,32 +32,21 @@ const sl = document.querySelector('#sn')
 sl.addEventListener('change', sS)
 
 
-function S() {
-    let no = document.querySelector('#nm')
+function S() {    
     nM.push(no.value)
     no.value = ''
-    no.focus()
-    let so = document.querySelector('#sbn')
+    no.focus()    
     sB.push(so.value)
     so.value = ''
-    so.focus()
-    let el = document.querySelector('#em')
+    so.focus()    
     eM.push(el.value)
     el.value = ''
-    el.focus()
-    let es = document.getElementsByName('dw')
+    el.focus()    
     for (let i=0; i<es.length; i++) {
         if (es[i].checked) {
             cT.push(es[i].value)
         }
     }
-    let ht = document.querySelector('#t0')
-    let cc = document.querySelector('#t1')
-    let js = document.querySelector('#t2')
-    let ph = document.querySelector('#t3')
-    let cs = document.querySelector('#t4')
-    let phy = document.querySelector('#t5')
-    let ja = document.querySelector('#t6')
     for (let i=nM.length-1; i<nM.length; i++) {
         if (ht.checked) {
             ax0 += `[${ht.value}]`
@@ -82,7 +83,7 @@ function S() {
     }
     r = document.querySelector('#r')
     for (let i=nM.length-1; i<nM.length; i++) {
-        obj = (`${nM[i]} ${sB[i]} ${eM[i]} ${cT[i]} ${sN[i]} ${tN[i]}`)
+        obj = (`${nM[i]}  ${sB[i]}  ${eM[i]}  ${cT[i]}  ${sN[i]}  ${tN[i]}`)
     }
     cD.push(obj)
 }
