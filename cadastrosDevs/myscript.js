@@ -5,6 +5,7 @@ var cT = []
 var sN = []
 var tN = []
 var ax0 = ''
+var opt 
 var r = document.querySelector('#r')
 var no = document.querySelector('#nm')
 var so = document.querySelector('#sbn')
@@ -20,7 +21,7 @@ var ja = document.querySelector('#t6')
 
 
 function sS() {
-    let opt = this.selectedOptions
+    opt = this.selectedOptions
     for (let i=0; i<opt.length; i++) {
         let txt = opt[i].textContent
         sN.push(txt)
@@ -79,6 +80,10 @@ function S() {
         phy.checked = false
         ja.checked = false
     }
+    for (let i=0; i<opt.length; i++) {
+        opt[i].selected = false
+    }
+
 }
 const bt = document.querySelector('#btns')
 bt.addEventListener('click', S)
