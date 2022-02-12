@@ -4,10 +4,8 @@ var eM = []
 var cT = []
 var sN = []
 var tN = []
-var cD = []
-var obj = new Object
-var r = ''
 var ax0 = ''
+var r = document.querySelector('#r')
 var no = document.querySelector('#nm')
 var so = document.querySelector('#sbn')
 var el = document.querySelector('#em')
@@ -81,11 +79,6 @@ function S() {
         phy.checked = false
         ja.checked = false
     }
-    r = document.querySelector('#r')
-    for (let i=nM.length-1; i<nM.length; i++) {
-        obj = (`${nM[i]}  ${sB[i]}  ${eM[i]}  ${cT[i]}  ${sN[i]}  ${tN[i]}`)
-    }
-    cD.push(obj)
 }
 const bt = document.querySelector('#btns')
 bt.addEventListener('click', S)
@@ -93,6 +86,10 @@ bt.addEventListener('click', S)
 
 function rL() {
     for (let i=0; i<nM.length; i++) {
-        r.innerHTML += `<p>${cD[i]}</p>`
+        r.innerHTML += `<p>${nM[i]}  ${sB[i]}  ${eM[i]}  ${cT[i]}  ${sN[i]}  ${tN[i]}</p>`
     }
+}
+
+function lR() {
+    r.innerHTML = ''
 }
