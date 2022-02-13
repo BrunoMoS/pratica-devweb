@@ -4,8 +4,10 @@ var eM = []
 var cT = []
 var sN = []
 var tN = []
+var cD = []
+var obj 
 var ax0 = ''
-var opt 
+var opt
 var r = document.querySelector('#r')
 var no = document.querySelector('#nm')
 var so = document.querySelector('#sbn')
@@ -23,9 +25,9 @@ var ja = document.querySelector('#t6')
 function sS() {
     opt = this.selectedOptions
     for (let i=0; i<opt.length; i++) {
-        let txt = opt[i].textContent
+        let txt = opt[i].value
         sN.push(txt)
-    }
+    }   
 }
 const sl = document.querySelector('#sn')
 sl.addEventListener('change', sS)
@@ -79,19 +81,28 @@ function S() {
         cs.checked = false
         phy.checked = false
         ja.checked = false
+    } 
+    for (let i=nM.length-1; i<nM.length; i++) {
+        obj = {nome: nM[i], sobrenome: sB[i], email: eM[i], categoria: cT[i], senioridade: sN[i], tecnologia: tN[i]}
     }
+    cD.push(obj)
     for (let i=0; i<opt.length; i++) {
         opt[i].selected = false
     }
-
 }
 const bt = document.querySelector('#btns')
 bt.addEventListener('click', S)
 
+function resp(objeto) {
+    for (let property in objeto) {
+        r.innerHTML += `<p>${property}: ${objeto[property]}</p>`
+    }
+}
+
 
 function rL() {
     for (let i=0; i<nM.length; i++) {
-        r.innerHTML += `<p>${nM[i]}  ${sB[i]}  ${eM[i]}  ${cT[i]}  ${sN[i]}  ${tN[i]}</p>`
+        resp(cD[i])
     }
 }
 
