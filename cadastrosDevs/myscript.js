@@ -81,14 +81,14 @@ function S() {
         cs.checked = false
         phy.checked = false
         ja.checked = false
-    } 
+    }
+    for (let i=0; i<opt.length; i++) {
+        opt[i].selected = false
+    }
     for (let i=nM.length-1; i<nM.length; i++) {
         obj = {nome: nM[i], sobrenome: sB[i], email: eM[i], categoria: cT[i], senioridade: sN[i], tecnologia: tN[i]}
     }
     cD.push(obj)
-    for (let i=0; i<opt.length; i++) {
-        opt[i].selected = false
-    }
 }
 const bt = document.querySelector('#btns')
 bt.addEventListener('click', S)
