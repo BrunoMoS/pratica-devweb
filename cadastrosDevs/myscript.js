@@ -5,9 +5,9 @@ var cT = []
 var sN = []
 var tN = []
 var cD = []
-var obj 
+var obj = new Object
 var ax0 = ''
-var opt
+var opt = ''
 var r = document.querySelector('#r')
 var no = document.querySelector('#nm')
 var so = document.querySelector('#sbn')
@@ -92,6 +92,7 @@ function S() {
 }
 const bt = document.querySelector('#btns')
 bt.addEventListener('click', S)
+
 
 function resp(objeto) {
     for (let property in objeto) {
