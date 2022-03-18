@@ -2,15 +2,21 @@ var go = []
 var n = []
 var ga = []
 var nta = []
-var no = ''
-var ala = '' 
+var al = document.querySelector('#gabo') 
+var no = document.querySelector('#nom') 
+var ala = document.querySelector('#gaba')
+var guarGo = document.querySelector('#guarGo')
+var guarN = document.querySelector('#guarN')
+var guarGa = document.querySelector('#guarGa')
+var ver = document.querySelector('#ver')
+var rel = document.querySelector('#rel')
+var ren = document.querySelector('#ren')
+var r = document.querySelector('#alv')
 var sn = 0.0
 var m = 0.0
-var r = ''
 
 
-function guardarGo() {
-    let al = document.querySelector('#gabo')
+function guardarGo() { 
     go.push(al.value)
     al.value = ''
     al.focus()
@@ -18,10 +24,10 @@ function guardarGo() {
         al.disabled = true
     }
 }
+guarGo.addEventListener('click', guardarGo)
 
 
-function guardarN() {
-    no = document.querySelector('#nom')
+function guardarN() { 
     n.push(no.value)
     no.value = ''
     no.focus()
@@ -29,10 +35,10 @@ function guardarN() {
         no.disabled = true
     }
 }
+guarN.addEventListener('click', guardarN)
 
 
-function guardarGa() {
-    ala = document.querySelector('#gaba')
+function guardarGa() { 
     ga.push(ala.value)
     ala.value = ''
     ala.focus()
@@ -40,11 +46,11 @@ function guardarGa() {
         ala.disabled = true
     }
 }
+guarGa.addEventListener('click', guardarGa)
 
 
 function Verificar() {
     let nt = 0
-    r = document.querySelector('#rel')
     for (let j=n.length-1; j<n.length; j++){ 
         for (let i=0; i<go.length; i++) {
             for (let c=0; c<go.length; c++) {
@@ -68,21 +74,26 @@ function Verificar() {
         ga.pop()
     }
 }
+ver.addEventListener('click', Verificar)
 
 
 function Relatorio() {
-    let st = ''
+    let st 
     for (let i=0; i<n.length; i++) {
         if (nta[i]>5.0) {
             st = 'Aprovada(o)'
         } else {
             st = 'Reprovada(o)'
         }
-        r.innerHTML += `<p>${n[i]} Nota: ${nta[i]} Situação: ${st} Média da turma: ${m.toFixed(1)}</p>` 
+        let itemAd = document.createElement('option')
+        itemAd.text = `${n[i]} Nota: ${nta[i]} Situação: ${st} Média da turma: ${m.toFixed(1)}`
+        r.appendChild(itemAd)  
     }
 }
+rel.addEventListener('click', Relatorio)
 
 
 function Reiniciar() {
     r.innerHTML = ''
 }
+ren.addEventListener('click', Reiniciar)

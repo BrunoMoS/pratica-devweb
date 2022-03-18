@@ -14,13 +14,13 @@
             <h1>Sistema de Notas e Médias</h1>
         </header>
         <article>
-            <p>Gabarito Oficial <input type="text" name="gab" id="gabo"><input type="button" value="Salvar" id="dec" onclick="guardarGo()"></p>
-            <p>Nome Aluno <input type="text" id="nom"><input type="button" value="Salvar" id="dec" onclick="guardarN()"></p>
-            <p>Gabarito Aluno <input type="text" id="gaba"><input type="button" value="Salvar" id="dec" onclick="guardarGa()"></p>
-            <p><input type="button" value="Verificar" id="dec" onclick="Verificar()"></p>
-            <p><input type="button" value="Relatório" id="dec" onclick="Relatorio()"></p>
-            <p><input type="button" value="Remover Relatório" id="dec" onclick="Reiniciar()"></p>
-            <div id="rel"></div>
+            <p>Gabarito Oficial <input type="text" name="gab" id="gabo" class="cxt" maxlength="1"><input type="button" value="Salvar" id="guarGo" class="dec"></p>
+            <p>Nome Aluno <input type="text" id="nom" class="cxt"><input type="button" value="Salvar" id="guarN" class="dec"></p>
+            <p>Gabarito Aluno <input type="text" id="gaba" class="cxt" maxlength="1"><input type="button" value="Salvar" id="guarGa" class="dec"></p>
+            <p><input type="button" value="Verificar" id="ver" class="dec"></p>
+            <p><input type="button" value="Relatório" id="rel" class="dec"></p>
+            <p><input type="button" value="Remover Relatório" class="dec" id="ren"></p>
+            <p><select name="alvo" id="alv" size="6"></select></p>
         </article>
     </main>
     <script src="myjs.js"></script>
