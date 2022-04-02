@@ -1,3 +1,5 @@
+let count = 0
+let show = document.querySelector('.hide')
 function addTask() {
     const taskTitle = document.querySelector('#task-title').value
     if(taskTitle) {
@@ -15,11 +17,19 @@ function addTask() {
             completeTask(this)
         })
         document.querySelector('#task-title').value = ''
+        count++
+        if(count===1) {
+            show.classList.remove('hide')
+        } 
     }
 }
 
 function removeTask(task) {
     task.parentNode.remove(true)
+    count--
+    if(count===0) {
+        show.classList.add('hide')
+    }
 }
 
 function completeTask(task) {

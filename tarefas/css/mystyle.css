@@ -72,7 +72,6 @@ ion-icon {
     height: 50px;
     line-height: 50px;
     position: relative;
-    border-bottom: 3px solid #34073D;
     background-color: #FFF;
     font-weight: bold;
     color: #34073D;
@@ -121,4 +120,12 @@ ion-icon {
     background-color: #34073D;
     color: #FFF;
     text-decoration: line-through;
+}
+
+@media screen and (max-width: 576px) {
+    
+    #tasks-container {
+        width: 80%;
+    }
+
 }
