@@ -1,19 +1,19 @@
-var go = []
-var n = []
-var ga = []
-var nta = []
-var al = document.querySelector('#gabo') 
-var no = document.querySelector('#nom') 
-var ala = document.querySelector('#gaba')
-var guarGo = document.querySelector('#guarGo')
-var guarN = document.querySelector('#guarN')
-var guarGa = document.querySelector('#guarGa')
-var ver = document.querySelector('#ver')
-var rel = document.querySelector('#rel')
-var ren = document.querySelector('#ren')
-var r = document.querySelector('#alv')
-var sn = 0.0
-var m = 0.0
+let go = []
+let n = []
+let ga = []
+let nta = []
+const al = document.querySelector('#gabo') 
+const no = document.querySelector('#nom') 
+const ala = document.querySelector('#gaba')
+const guarGo = document.querySelector('#guarGo')
+const guarN = document.querySelector('#guarN')
+const guarGa = document.querySelector('#guarGa')
+const ver = document.querySelector('#ver')
+const rel = document.querySelector('#rel')
+const ren = document.querySelector('#ren')
+const r = document.querySelector('#alv')
+let sn = 0.0
+let m = 0.0
 
 
 function guardarGo() { 
@@ -25,6 +25,11 @@ function guardarGo() {
     }
 }
 guarGo.addEventListener('click', guardarGo)
+al.addEventListener('keypress', (e) => {
+    if(!checkChar(e)) {
+        e.preventDefault()
+    }
+})
 
 
 function guardarN() { 
@@ -36,6 +41,11 @@ function guardarN() {
     }
 }
 guarN.addEventListener('click', guardarN)
+no.addEventListener('keypress', (e) => {
+    if(!checkCharN(e)) {
+        e.preventDefault()
+    }
+})
 
 
 function guardarGa() { 
@@ -47,7 +57,27 @@ function guardarGa() {
     }
 }
 guarGa.addEventListener('click', guardarGa)
+ala.addEventListener('keypress', (e) => {
+    if(!checkChar(e)) {
+        e.preventDefault()
+    }
+})
 
+function checkChar(e) {
+    const char = String.fromCharCode(e.keyCode)
+    const pattern = '[a-eA-E]'
+    if(char.match(pattern)) {
+        return true
+    }
+}
+
+function checkCharN(e) {
+    const char = String.fromCharCode(e.keyCode)
+    const pattern = '[a-zA-Z]'
+    if(char.match(pattern)) {
+        return true
+    }
+}
 
 function Verificar() {
     let nt = 0
@@ -65,6 +95,9 @@ function Verificar() {
         }
         sn += nta[j]
         m = sn/n.length
+        if(m%1!==0) {
+            m = m.toFixed(1)
+        }
     }
     if (ga.length===5) {
         no.disabled = false
@@ -86,7 +119,7 @@ function Relatorio() {
             st = 'Reprovada(o)'
         }
         let itemAd = document.createElement('option')
-        itemAd.text = `${n[i]} Nota: ${nta[i]} Situação: ${st} Média da turma: ${m.toFixed(1)}`
+        itemAd.text = `${n[i]} Nota: ${nta[i]} Situação: ${st} Média da turma: ${m}`
         r.appendChild(itemAd)  
     }
 }

@@ -1,5 +1,5 @@
 let count = 0
-let show = document.querySelector('.hide')
+const show = document.querySelector('.hide')
 function addTask() {
     const taskTitle = document.querySelector('#task-title').value
     if(taskTitle) {

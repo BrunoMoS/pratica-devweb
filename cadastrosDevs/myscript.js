@@ -92,6 +92,25 @@ function S() {
 }
 const bt = document.querySelector('#btns')
 bt.addEventListener('click', S)
+no.addEventListener('keypress', (e) => {
+    if(!checkChar(e)) {
+        e.preventDefault()
+    }
+})
+so.addEventListener('keypress', (e) => {
+    if(!checkChar(e)) {
+        e.preventDefault()
+    }
+})
+
+
+function checkChar(e) {
+    const char = String.fromCharCode(e.keyCode)
+    const pattern = '[a-zA-Z]'
+    if(char.match(pattern)) {
+        return true
+    }
+}
 
 
 function resp(objeto) {

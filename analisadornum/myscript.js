@@ -52,6 +52,9 @@ function Vrf() {
             }
         }
         m = sn / tn
+        if(m%1!==0) {
+            m = m.toFixed(1)
+        }
         r.innerHTML = '' 
         r.innerHTML += `<p>${tn} números cadastrados</p>`
         r.innerHTML += `<p>A soma dos números é ${sn}</p>`
