@@ -12,7 +12,7 @@ function Numero(num) {
 }
 
 function Lista(num, l) {
-    if (l.indexOf(Number(num)) != - 1) {
+    if (l.indexOf(Number(num)) !== - 1) {
         return true
     } else {
         return false
