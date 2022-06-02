@@ -1,0 +1,27 @@
+.list_buy {
+    padding: 0 0 1em;
+    margin: 0 0.5em;
+}
+
+.list_buy h2 {
+    text-align: center;
+    padding-left: 0.2em;
+    margin-bottom: 0.4em;
+}
+  
+.list_buy_inside {
+    margin: 0;
+}
+
+.list_buy_inside_shopp0 {
+    font-size: 1em;
+    font-weight: bold;
+    padding-right: 0.2em;
+    color: #EB0927;
+    background-color: #f9fafb;
+    border-radius: 3px;
+}
+
+.list_buy_inside_shopp01 {
+    text-align: center;
+}

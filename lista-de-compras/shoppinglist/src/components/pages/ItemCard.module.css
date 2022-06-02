@@ -1,0 +1,56 @@
+p {
+    margin: 0;
+   
+}
+  
+.shopp {
+    background-color:  #f9fafb;
+    padding: 0.2em 0.2em;
+    margin: 0 0 0.5em;
+    font-size: 0.8em;
+    color: #3A4E48;
+    border-radius: 3px;
+    width: 270px;
+}
+  
+.shopp_sp0 {
+    color: #09E01B;
+}
+  
+.shopp_sp1 {
+    padding-right: 0.2em;
+    border-right: 1px solid #3A4E48;
+    position: absolute;
+    right: 8.6em;
+}
+  
+.shopp_sp2 {
+    padding-right: 0.2em;
+    color: #09E01B;
+    border-right: 1px solid #3A4E48;
+    position: absolute;
+    right: 4.5em;
+}
+  
+.shopp_sp3 {
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .5s;
+    position: absolute;
+    top: 0.02em;
+    right: 2em;
+} 
+  
+.shopp_sp4 {
+    font-size: 1.2em;
+    padding: 0 0.2em;
+    cursor: pointer;
+    transition: .5s;
+    position: absolute;
+    top: 0.02em;
+    right: 0;
+}
+
+.shopp svg {
+    color: #EB0927;
+}

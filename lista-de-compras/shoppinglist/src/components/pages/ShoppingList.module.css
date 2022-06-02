@@ -1,0 +1,18 @@
+.list_buy {
+    padding: 0 0 1em;
+    margin: 0.5em 0;
+}
+  
+.list_buy svg {
+    font-size: 2em;
+}
+  
+.list_buy_inside {
+    margin: 0.5em ;
+}
+
+p, h2 {
+    margin: 0;
+    position: relative;
+}
+

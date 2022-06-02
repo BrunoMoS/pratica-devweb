@@ -1,0 +1,35 @@
+.item {
+    padding: 0.5em;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.item h1 {
+    margin-bottom: 0.1em;
+}
+
+.item p {
+    color: #f9fafb;
+}
+
+.item span {
+    font-weight: bold;
+    color: #3A4E48;
+}
+
+.details_container {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.2em;
+}
+
+.btn {
+    background-color: #3A4E48;
+    color: #9fb409;
+    padding: 0.4em 0.5em;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    margin-top: 0.5em;
+}
