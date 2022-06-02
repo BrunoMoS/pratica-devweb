@@ -1,4 +1,21 @@
 {
-  "shoplist": [],
+  "shoplist": [
+    {
+      "title": "sabonete",
+      "quantity": "5",
+      "price": "2.89",
+      "place": "Assai",
+      "cost": "14.45",
+      "id": 1
+    },
+    {
+      "title": "café",
+      "quantity": "1",
+      "price": "25.99",
+      "place": "silva",
+      "cost": "25.99",
+      "id": 2
+    }
+  ],
   "shoplistClone": []
 }

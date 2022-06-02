@@ -39,6 +39,7 @@ p {
     position: absolute;
     top: 0.02em;
     right: 2em;
+    color: #3A4E48;
 } 
   
 .shopp_sp4 {
@@ -49,8 +50,5 @@ p {
     position: absolute;
     top: 0.02em;
     right: 0;
-}
-
-.shopp svg {
     color: #EB0927;
 }
