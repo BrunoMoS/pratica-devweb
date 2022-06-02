@@ -26,8 +26,8 @@ export default function Itens() {
 
     let total = 0
     for(let i=0; i<itens.length; i++) {
-        let {cost: cost} = itens[i]
-        total += Number(cost) 
+        let {cost: costTotal} = itens[i]
+        total += Number(costTotal) 
     }
     
     function removeItem(id) {
