@@ -15,6 +15,14 @@
       "place": "silva",
       "cost": "25.99",
       "id": 2
+    },
+    {
+      "title": "iorgurt",
+      "quantity": "12",
+      "price": "4.25",
+      "place": "Carrefour",
+      "cost": "51.00",
+      "id": 3
     }
   ],
   "shoplistClone": []
