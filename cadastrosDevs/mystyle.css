@@ -1,94 +1,102 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    width: 70%;
-    color: #ebedec;
-    min-height: 50px;
-    padding-top: 30px;
-    padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 70%;
+  color: #eeecf7;
+  min-height: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 fieldset {
-    border: 0;
+  border: 0;
 }
 
 body {
-    background-color: #b0cdd3;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    color: #ebedec;
-    margin-left: 36%;
-    margin-top: 2%;
-    justify-content: center;
+  background-color: #67ddca;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #eeecf7;
+  margin-left: 36%;
+  margin-top: 2%;
+  justify-content: center;
 }
 
 main {
-    max-width: 700px;
-    min-width: 300px;
+  max-width: 700px;
+  min-width: 300px;
 }
 
-input, select, button {
-    border-radius: 5px;
-    outline: none;
+input,
+select,
+button {
+  border-radius: 3px;
+  outline: none;
 }
 
 .cp {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .cp label {
-    margin-bottom: 0.2em;
-    color: #ebedec;
-    display: block;
+  margin-bottom: 0.2em;
+  color: #eeecf7;
+  display: block;
 }
 
 fieldset.gr .cp {
-    float: left;
-    margin-right: 1em;
-    margin-top: 10px;
+  float: left;
+  margin-right: 1em;
+  margin-top: 10px;
 }
 
-.cp input[type="text"], .cp input[type="email"], .cp select {
-    padding: 00.2em;
-    border: 0.5px solid #deaa76;
-    box-shadow: 2px 2px 2px #deaa76;
+.cp input[type="text"],
+.cp input[type="email"],
+.cp select {
+  padding: 00.2em;
+  border: 0.5px solid #e93299;
+  box-shadow: 2px 2px 2px #e93299;
 }
 
 .cp select option {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
-.cp input:focus, .cp select:focus {
-    background-color: #ebedec;
+.cp input:focus,
+.cp select:focus {
+  background-color: #eeecf7;
 }
 
 .btn {
-    font-size: 1.2em;
-    background: #ebedec;
-    border: 0;
-    margin: 10px;    
-    color: #deaa76;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px #deaa76;
+  font-size: 1.2em;
+  background: #e93299;
+  border: 0;
+  margin: 10px;
+  color: #eeecf7;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px #e93299;
 }
 
 .btn:hover {
-    background: #1C77C3;
-    box-shadow: inset 1px 1px 1px #ebedec;
-    color: #ebedec;
+  background: #5249e3;
+  box-shadow: inset 1px 1px 1px #eeecf7;
+  color: #eeecf7;
 }
 
-#ck input{ 
-    margin-top: 5px;
-    margin-bottom: 5px;
+#ck input {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-
-
+#boxText {
+  width: 92%;
+  padding-left: 2px;
+  border-radius: 3px;
+}

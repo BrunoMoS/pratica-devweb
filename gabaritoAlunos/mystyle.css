@@ -1,6 +1,13 @@
 @charset "UTF-08";
 
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
 body {
+    margin: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -8,42 +15,40 @@ header {
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
     color: snow;
     width: 500px;
-    padding: 0.7px;
+    padding: 8px;
     text-align: center;
+    box-shadow: 1.5px 1.5px 3px #262b2a
+}
+
+section {
+    background-color: #d2d7e6;
+    width: 500px;
+    padding: 8px;
     box-shadow: 1.5px 1.5px 3px #262b2a
 }
 
 article {
-    background-color: #fbfcff;
-    width: 500px;
-    padding: 0.5px;
-    box-shadow: 1.5px 1.5px 3px #262b2a
-}
-
-p {
-    width: 90%;
-    text-align: right;
-}
-
-.dec {
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 1 px;
-    text-align: center;
-    border: 1px solid #586361;
-    background: transparent;
-    color: #262b2a;
-    box-shadow: 1px 1px 2px #5e6b69;
-    border-radius: 5px;
-    padding:  3px 10px;
-    display: inline-block;
-    cursor: pointer;
-    margin: 1px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
 }
 
 select {
     width: 98%;
 }
+ 
+input {
+    padding: 4px;
+}
 
-.cxt {
-    outline: none;
+.dec {
+    border: 1px solid #586361;
+    background: transparent;
+    font-weight: bold;
+    color: #262b2a;
+    box-shadow: 1px 1px 2px #5e6b69;
+    border-radius: 4px;
+    padding:  4px 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
 }

@@ -1,132 +1,72 @@
-var nM = []
-var sB = []
-var eM = []
-var cT = []
-var sN = []
-var tN = []
-var cD = []
-var obj = new Object
-var ax0 = ''
-var opt = ''
-var r = document.querySelector('#r')
-var no = document.querySelector('#nm')
-var so = document.querySelector('#sbn')
-var el = document.querySelector('#em')
-var es = document.getElementsByName('dw')
-var ht = document.querySelector('#t0')
-var cc = document.querySelector('#t1')
-var js = document.querySelector('#t2')
-var ph = document.querySelector('#t3')
-var cs = document.querySelector('#t4')
-var phy = document.querySelector('#t5')
-var ja = document.querySelector('#t6')
+const boxText = document.querySelector("#boxText");
+const firstName = document.querySelector("#firstName");
+const surname = document.querySelector("#surname");
+const email = document.querySelector("#email");
+const applicationSide = document.getElementsByName("radioBox");
+const language = document.querySelectorAll(".check");
+const seniority = document.querySelectorAll(".select");
+let objectCollection = [];
+let obj = new Object();
 
-
-function sS() {
-    opt = this.selectedOptions
-    for (let i=0; i<opt.length; i++) {
-        let txt = opt[i].value
-        sN.push(txt)
-    }   
+function handleSelect() {
+  let value = "";
+  Array.from(seniority).forEach(element => {
+    if (element.selected) {
+      value = element.value;
+    }
+  });
+  return value;
 }
-const sl = document.querySelector('#sn')
-sl.addEventListener('change', sS)
 
-
-function S() {    
-    nM.push(no.value)
-    no.value = ''
-    no.focus()    
-    sB.push(so.value)
-    so.value = ''
-    so.focus()    
-    eM.push(el.value)
-    el.value = ''
-    el.focus()    
-    for (let i=0; i<es.length; i++) {
-        if (es[i].checked) {
-            cT.push(es[i].value)
-        }
+function handleRadioBox() {
+  let value = "";
+  Array.from(applicationSide).forEach(element => {
+    if (element.checked) {
+      value = element.value;
     }
-    for (let i=nM.length-1; i<nM.length; i++) {
-        if (ht.checked) {
-            ax0 += `[${ht.value}]`
-        }
-        if (cc.checked) {
-            ax0 += `[${cc.value}]`
-        }
-        if (js.checked) {
-            ax0 += `[${js.value}]`
-        }
-        if (ph.checked) {
-            ax0 += `[${ph.value}]`
-        }
-        if (cs.checked) {
-            ax0 += `[${cs.value}]`
-        }
-        if (phy.checked) {
-            ax0 += `[${phy.value}]`
-        }
-        if (ja.checked) {
-            ax0 += `[${ja.value}]`
-        }
-        tN.push(ax0)
-        ax0 = ''
-    }
-    for (let i=0; i<1; i++) {
-        ht.checked = false
-        cc.checked = false
-        js.checked = false
-        ph.checked = false
-        cs.checked = false
-        phy.checked = false
-        ja.checked = false
-    }
-    for (let i=0; i<opt.length; i++) {
-        opt[i].selected = false
-    }
-    for (let i=nM.length-1; i<nM.length; i++) {
-        obj = {nome: nM[i], sobrenome: sB[i], email: eM[i], categoria: cT[i], senioridade: sN[i], tecnologia: tN[i]}
-    }
-    cD.push(obj)
+  });
+  return value;
 }
-const bt = document.querySelector('#btns')
-bt.addEventListener('click', S)
-no.addEventListener('keypress', (e) => {
-    if(!checkChar(e)) {
-        e.preventDefault()
+
+function handleCheckBox() {
+  let value = ''
+  Array.from(language).forEach(element => {
+    if (element.checked) {
+      value += `${element.value} `;
     }
-})
-so.addEventListener('keypress', (e) => {
-    if(!checkChar(e)) {
-        e.preventDefault()
-    }
+    element.checked = false;
+  });
+  return value;
+}
+
+document.querySelector("#btnSave").addEventListener("click", (event) => {
+  event.preventDefault();
+  obj = {
+    nome: `${firstName.value} ${surname.value}`,
+    email: `${email.value}`,
+    categoria: handleRadioBox(),
+    senioridade: handleSelect(),
+    tecnologias: handleCheckBox(),
+  };
+  objectCollection.push(obj);
+  firstName.value = "";
+  surname.value = "";
+  email.value = "";
+  firstName.focus();
+});
+
+function response(objeto) {
+  for (let property in objeto) {
+    let itemAd = document.createElement("option");
+    itemAd.textContent = `${property}: ${objeto[property]}`;
+    boxText.appendChild(itemAd);
+  }
+}
+
+document.querySelector("#btnReport").addEventListener('click', () => {
+    objectCollection.forEach(element => {
+        response(element)
+    })
 })
 
-
-function checkChar(e) {
-    const char = String.fromCharCode(e.keyCode)
-    const pattern = '[a-zA-Z]'
-    if(char.match(pattern)) {
-        return true
-    }
-}
-
-
-function resp(objeto) {
-    for (let property in objeto) {
-        r.innerHTML += `<p>${property}: ${objeto[property]}</p>`
-    }
-}
-
-
-function rL() {
-    for (let i=0; i<nM.length; i++) {
-        resp(cD[i])
-    }
-}
-
-
-function lR() {
-    r.innerHTML = ''
-}
+document.querySelector("#btnClear").addEventListener('click', () => boxText.textContent = '')

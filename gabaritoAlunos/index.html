@@ -1,28 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabarito</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="mystyle.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
     <main>
-        <header>
-            <h1>Sistema de Notas e Médias</h1>
-        </header>
-        <article>
-            <p>Gabarito Oficial <input type="text" name="gab" id="gabo" class="cxt" maxlength="1" placeholder="Digite as alternativas"><input type="button" value="Salvar" id="guarGo" class="dec"></p>
-            <p>Nome Aluno <input type="text" id="nom" class="cxt" placeholder="Digite o nome"><input type="button" value="Salvar" id="guarN" class="dec"></p>
-            <p>Gabarito Aluno <input type="text" id="gaba" class="cxt" maxlength="1" placeholder="Digite as alternativas"><input type="button" value="Salvar" id="guarGa" class="dec"></p>
-            <p><input type="button" value="Verificar" id="ver" class="dec"></p>
-            <p><input type="button" value="Relatório" id="rel" class="dec"></p>
-            <p><input type="button" value="Remover Relatório" class="dec" id="ren"></p>
-            <p><select name="alvo" id="alv" size="6"></select></p>
-        </article>
+      <header>
+        <h1>Sistema de Notas</h1>
+      </header>
+      <section>
+        <form action="">
+          <article>
+            <div>
+              <label for="">Nome do Aluno</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="input-name"
+                class="input_name"
+                placeholder="Digite o nome"
+              />
+            </div>
+          </article>
+          <article>
+            <div>
+              <label for="">Gabarito Oficial</label>
+            </div>
+            <div>
+              <label for="a">a</label>
+              <input
+                type="radio"
+                name="radio"
+                id="officialTemplate"
+                class="radio_box"
+                value="a"
+                checked
+              />
+              <label for="b">b</label>
+              <input
+                type="radio"
+                name="radio"
+                id="officialTemplate"
+                class="radio_box"
+                value="b"
+              />
+              <label for="c">c</label>
+              <input
+                type="radio"
+                name="radio"
+                id="officialTemplate"
+                class="radio_box"
+                value="c"
+              />
+              <label for="d">d</label>
+              <input
+                type="radio"
+                name="radio"
+                id="officialTemplate"
+                class="radio_box"
+                value="d"
+              />
+              <label for="e">e</label>
+              <input
+                type="radio"
+                name="radio"
+                id="officialTemplate"
+                class="radio_box"
+                value="e"
+              />
+            </div>
+            <input type="button" value="Salvar" id="saveOfficial" class="dec" />
+          </article>
+          <article>
+            <div>
+              <label for="">Gabarito do Aluno</label>
+            </div>
+            <div>
+              <label for="a">a</label>
+              <input
+                type="radio"
+                name="radioBox"
+                id="studentTemplate"
+                class="radioBox"
+                value="a"
+                checked
+              />
+              <label for="b">b</label>
+              <input
+                type="radio"
+                name="radioBox"
+                id="studentTemplate"
+                class="radioBox"
+                value="b"
+              />
+              <label for="c">c</label>
+              <input
+                type="radio"
+                name="radioBox"
+                id="studentTemplate"
+                class="radioBox"
+                value="c"
+              />
+              <label for="d">d</label>
+              <input
+                type="radio"
+                name="radioBox"
+                id="studentTemplate"
+                class="radioBox"
+                value="d"
+              />
+              <label for="e">e</label>
+              <input
+                type="radio"
+                name="radioBox"
+                id="studentTemplate"
+                class="radioBox"
+                value="e"
+              />
+            </div>
+            <input type="button" value="Salvar" id="saveStudent" class="dec" />
+          </article>
+          <input type="button" value="Salvar" id="save" class="dec" />
+          <input type="button" value="Relatório" id="reports" class="dec" />
+          <input type="button" value="Remover Relatório" id="removeReport" class="dec" />
+          <select name="alvo" id="showReports" size="6"></select>
+        </form>
+      </section>
     </main>
-    <script src="myjs.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
